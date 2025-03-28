@@ -1,4 +1,4 @@
-![alt text](visualizations\image.png)
+![alt text](visualizations/image.png)
 
 # Exploring Crime in Washington, D.C.: A Deep Dive into the Data
 ## Introduction
@@ -25,7 +25,7 @@ A quick look at the distribution of crime types gives us an idea of which offens
 - Understanding crime frequency helps prioritize law enforcement strategies.
 ### Temporal Spread of Crimes
 Before diving into detailed time trends, let's visualize the overall distribution of crimes over time:
-![alt text](visualizations\charts\Crime_Occurrence_OT_v1.png)
+![alt text](visualizations/charts/Crime_Occurrence_OT_v1.png)
 - This will help spot periods of high or low crime activity.
 - We might identify seasonal trends or data inconsistencies.
 - We would also remove the first quarter of 2022 as it will skew our analysis
@@ -38,7 +38,7 @@ cleaned_df = cleaned_df.loc[(cleaned_df['Year_Quarter'] != "2022Q1")]
 ## Temporal Trend
 To begin our time-based analysis, we'll start from the highest level of granularity: quarterly trends. Given that our dataset spans only three years, a quarter-level view helps us smooth out short-term fluctuations and highlight longer-term patterns.
 ### Quarterly Crime Trend (2022 Q2–2024 Q4)
-![Chart showing Quarter trends](visualizations\charts\Crime_trend_Quater_v1.png)
+![Chart showing Quarter trends](visualizations/charts/Crime_trend_Quater_v1.png)
 The chart reveals a noticeable spike in crime counts during the middle of the observed period. Specifically:
 - 2023-Q2 recorded 8,741 crimes
 - 2023-Q3 saw the highest count at 9,308 crimes
@@ -47,7 +47,7 @@ The chart reveals a noticeable spike in crime counts during the middle of the ob
 These three quarters deviate significantly from the overall trend, suggesting a temporary surge in criminal activity during that year.<br>
 Outside of these high-crime quarters, the crime rate stabilizes around an average of 7,000 crimes per quarter.  This spike could stem from a combination of seasonal factors, policy changes, economic shifts, or social unrest. Further investigation would be required to understand the root causes.
 ### Monthly Trend Overview
-![Chart showing Monthly Trends Comparism](visualizations\charts\Crime_trend_by_month_v1.png)
+![Chart showing Monthly Trends Comparism](visualizations/charts/Crime_trend_by_month_v1.png)
 The above line chart compares monthly crime trends from 2022 Q2 till 2024: 
 - In 2022, crime trends rose from ~2,000 in April to a pick in July and August, with ~2,500 before going for a steep decline.
 - In 2023, crime levels fluctuated between 2,450 and 3,350 cases monthly, peaking in July (3,350 cases) and tapering off towards December.
@@ -55,7 +55,7 @@ The above line chart compares monthly crime trends from 2022 Q2 till 2024: 
 <p>Across 2022 and 2023, a clear seasonal pattern emerges: crime tends to increase from spring, peaking in summer (July–August), before declining towards the end of the year. Which 2024 shows a peak in crime rate around September</p>
 
 ### Average Monthly Trend
-![Chart showing Average Monthly Trends](visualizations\charts\Avg_crime_trend_across_AY_v1.png)
+![Chart showing Average Monthly Trends](visualizations/charts/Avg_crime_trend_across_AY_v1.png)
 When averaged across both years, we observe:
 - July consistently records the highest average crime count (2,806 cases), marking it as the peak crime month. possibly due to a spike in 2023
 - August (2,724 cases) and October (2,696 cases) also show elevated crime levels.
@@ -64,7 +64,7 @@ When averaged across both years, we observe:
 These patterns reinforce a clear seasonal trend - crime tends to surge during the summer months (July–August) and decrease during spring and late winter.
 
 ### Daily Crime Trend Overview
-![Chart showing Avg crime Trends by weekday](visualizations\charts\AVG_crime_trend_by_DOW_v1.png)
+![Chart showing Avg crime Trends by weekday](visualizations/charts/AVG_crime_trend_by_DOW_v1.png)
 This bar chart illustrates the average distribution of crimes across each day of the week:
 - Friday records the highest average crime rate (87.94 cases), followed closely by Saturday (86.00 cases).
 - Crime levels gradually decrease as the week progresses, with the lowest crime rate observed on Thursday (78.00 cases).
@@ -74,7 +74,7 @@ This bar chart illustrates the average distribution of crimes across each day of
 This pattern reveals a clear weekly cycle in crime occurrence, with activity peaking towards the end of the work week and over the weekend, then tapering off midweek.
 
 ### Yearly Comparison of Daily Crime Trends
-![Chart showing Avg crime Trends by weekday](visualizations\charts\AVG_crime_trend_by_DOW_YOY_v1.png)
+![Chart showing Avg crime Trends by weekday](visualizations/charts/AVG_crime_trend_by_DOW_YOY_v1.png)
 This grouped bar chart compares average daily crime trends across 2022, 2023, and 2024:
 - 2023 consistently recorded the highest crime levels across all weekdays, peaking notably on Fridays and Saturdays.
 - In contrast, 2024 showed a general decline in crime levels across all days, though crime remained relatively high on weekends.
@@ -83,14 +83,14 @@ This grouped bar chart compares average daily crime trends across 2022, 2023, an
 Across all years, the same weekday pattern persisted: crime levels rise towards the weekend, dip midweek, and increase again on Fridays and Saturdays.
 
 ### Hourly Trend
-![Chart showing Avg crime Trends by weekday](visualizations\charts\Crime_DIS_by_SHIFT_v1.png)
+![Chart showing Avg crime Trends by weekday](visualizations/charts/Crime_DIS_by_SHIFT_v1.png)
 The bar chart above shows the total number of crime incidents recorded across three police shifts: Day (8 AM - 4 PM), Evening (4 PM - 12 AM), and Midnight (12 AM - 8 AM).
 - The Evening shift reported the highest number of crimes (34,048 incidents), followed closely by the Day shift (33,410 incidents).
 - The Midnight shift recorded the lowest crime count (15,840 incidents).
 
 This pattern suggests that most crimes occur between 8 AM and midnight, with relatively fewer incidents during late-night and early-morning hours.
 
-![Chart showing Avg crime Trends by weekday](visualizations\charts\Crime_DIS_by_SHIFT_YOY_v1.png)
+![Chart showing Avg crime Trends by weekday](visualizations/charts/Crime_DIS_by_SHIFT_YOY_v1.png)
 To examine whether this shift-based pattern is consistent over time, I compared the average number of crimes per shift across 2022, 2023, and 2024.
 The chart shows that:
 - The Evening shift consistently had the highest crime average each year.
@@ -99,7 +99,7 @@ The chart shows that:
 
 The year 2023 experienced slightly higher crime averages across all shifts, indicating a temporary rise in crime activity compared to 2022 and 2024.
 
-![Chart showing Avg crime Trends by weekday](visualizations\charts\Crime_Heatmap_BY_Day_and_Hour_v1.png)
+![Chart showing Avg crime Trends by weekday](visualizations/charts/Crime_Heatmap_BY_Day_and_Hour_v1.png)
 To further explore when crimes are most likely to occur, I plotted a heatmap showing crime distribution by hour of the day and day of the week.
 - Crime activity increases from 8 AM and remains high until approximately 10 PM.
 - The highest crime intensity is concentrated between 12 PM and 8 PM.
